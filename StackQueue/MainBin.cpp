@@ -60,6 +60,7 @@ int main() {
 	std::fstream inputfile, outputfile;
 	inputfile.open("input", std::ios::in);
 	outputfile.open("onput", std::ios::out);
+
 	//Ö÷Ìå
 
 
