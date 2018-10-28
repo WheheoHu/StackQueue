@@ -54,7 +54,16 @@
 //7  5
 
 #include <iostream>
+#include <fstream>
 
 int main() {
-	return 0;
+	std::fstream inputfile, outputfile;
+	inputfile.open("input", std::ios::in);
+	outputfile.open("onput", std::ios::out);
+	//Ö÷Ìå
+
+
+
+	inputfile.close();
+	outputfile.close();
 }
