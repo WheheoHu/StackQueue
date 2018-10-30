@@ -78,7 +78,7 @@ int main() {
 	Stack<int> st;
 	Stack<int> sttemp;
 
-	
+	//输入以及处理
 	int *cardata = new int[3];
 	while(!inputfile.eof())
 	{
@@ -100,7 +100,7 @@ int main() {
 			location = 0;
 		}
 	}
-	outputfile << cardata[2];
+	//输出。
 	
 	inputfile.close();
 	outputfile.close();
