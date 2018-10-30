@@ -9,7 +9,7 @@ struct StackNode
 	bool isout;
 	int time;
 	StackNode<T> *nextnode;
-	StackNode<T>(const T &d,const int &t) : data(d), nextnode(NULL), isout(false),time(t) {}
+	StackNode<T>(const T &d, const int &t) : data(d), nextnode(NULL), isout(false), time(t) {}
 
 };
 
@@ -21,8 +21,8 @@ public:
 	~Stack();
 	void InitStack();
 	T GetTop();
-	void Push(T pushdata,int time);
-	int LocateElem(T ElemToLocate,T &data);
+	void Push(T pushdata, int time);
+	int LocateElem(T ElemToLocate, T &data);
 	int LocateElem(T ElemToLocate);
 	void Pop();
 	void Pop(T& popdata);
@@ -45,7 +45,7 @@ inline Stack<T>::~Stack()
 template<class T>
 inline void Stack<T>::InitStack()
 {
-	bottom =new StackNode<T>(0,0);
+	bottom = new StackNode<T>(0, 0);
 	top = bottom;
 }
 
@@ -56,15 +56,15 @@ inline T Stack<T>::GetTop()
 }
 
 template<class T>
-inline void Stack<T>::Push(T pushdata,int time)
+inline void Stack<T>::Push(T pushdata, int time)
 {
-	StackNode<T> *p = new StackNode<T>(pushdata,time);
-	p->nextnode = top; 
+	StackNode<T> *p = new StackNode<T>(pushdata, time);
+	p->nextnode = top;
 	top = p;
 }
 
 template<class T>
-inline int Stack<T>::LocateElem(T ElemToLocate,T &data)
+inline int Stack<T>::LocateElem(T ElemToLocate, T &data)
 {
 	int location;
 	StackNode<T> *p = top;
@@ -73,7 +73,7 @@ inline int Stack<T>::LocateElem(T ElemToLocate,T &data)
 		p = p->nextnode;
 		location++;
 	}
-	if (p==bottom)
+	if (p == bottom)
 	{
 		exit(OVERFLOW);
 	}
@@ -113,6 +113,6 @@ inline void Stack<T>::Pop(T& popdata)
 	top = temp;
 	free(temp);
 	temp = NULL;
-	
+
 }
 
