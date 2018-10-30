@@ -18,7 +18,7 @@ public:
 	Stack(int Stacksize);
 	~Stack();
 	void InitStack();
-	void GetTop();
+	T GetTop();
 	void Push();
 	void Pop();
 
@@ -42,5 +42,14 @@ inline Stack<T>::~Stack()
 template<class T>
 inline void Stack<T>::InitStack()
 {
+	bottom = StackNode<T>(0);
+	top = bottom;
+	mainstack = top;
+}
+
+template<class T>
+inline T Stack<T>::GetTop()
+{
+	return top->data;
 }
 

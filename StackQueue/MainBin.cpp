@@ -59,7 +59,6 @@
 //3  4
 //7  5
 
-#include <iostream>
 #include <fstream>
 #include "linearlinkedlist.h"
 #include "lineartable.h"
