@@ -67,7 +67,7 @@
 int main() {
 	std::fstream inputfile, outputfile;
 	inputfile.open("input", std::ios::in);
-	outputfile.open("onput", std::ios::out);
+	outputfile.open("output", std::ios::out);
 
 	//Ö÷Ìå
 
@@ -78,15 +78,18 @@ int main() {
 	inputfile >> cost_per_hour;
 
 	Stack<int> st;
+	Stack<int> sttemp;
+
 	
 	int *cardata = new int[3];
 	while(!inputfile.eof())
 	{
-		
+		inputfile >> cardata[0];
+		inputfile >> cardata[1];
+		inputfile >> cardata[2];
 	}
-	std::cout << cardata[2];
+	outputfile << cardata[2];
 	
 	inputfile.close();
 	outputfile.close();
-	system("pause");
 }

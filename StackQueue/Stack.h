@@ -6,8 +6,10 @@ template<typename T>
 struct StackNode
 {
 	T data;
-	StackNode *nextnode;
-	StackNode(const T &a):data(a) nextnode(NULL){}
+	bool isout;
+	int time;
+	StackNode<T> *nextnode;
+	StackNode<T>(const T &d,const int &t) : data(d), nextnode(NULL), isout(false),time(t) {}
 
 };
 
@@ -24,7 +26,7 @@ public:
 	void Pop(T& popdata);
 
 private:
-	StackNode  *top, *bottom;
+	StackNode<T>  *top, *bottom;
 };
 
 template<class T>
@@ -36,13 +38,12 @@ inline Stack<T>::Stack()
 template<class T>
 inline Stack<T>::~Stack()
 {
-	delete[] mainstack;
 }
 
 template<class T>
 inline void Stack<T>::InitStack()
 {
-	bottom = StackNode<T>(0);
+	bottom =new StackNode<T>(0);
 	top = bottom;
 }
 
