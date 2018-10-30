@@ -61,6 +61,7 @@
 
 #include <fstream>
 #include "Stack.h"
+#include "Quene.h"
 
 int main() {
 	std::fstream inputfile, outputfile;
@@ -101,7 +102,7 @@ int main() {
 	//	}
 	//}
 	//Êä³ö¡£
-	
+
 	inputfile.close();
 	outputfile.close();
 }

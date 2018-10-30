@@ -120,7 +120,11 @@
   <ItemGroup>
     <ClInclude Include="linearlinkedlist.h" />
     <ClInclude Include="lineartable.h" />
+    <ClInclude Include="Quene.h" />
     <ClInclude Include="Stack.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
