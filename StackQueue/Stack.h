@@ -22,6 +22,7 @@ public:
 	void InitStack();
 	T GetTop();
 	void Push(T pushdata);
+	void LocateElem(T ElemToLocate,T &data);
 	void Pop();
 	void Pop(T& popdata);
 
@@ -59,6 +60,23 @@ inline void Stack<T>::Push(T pushdata)
 	StackNode<T> *p = new StackNode<T>(pushdata);
 	p->nextnode = top; 
 	top = p;
+}
+
+template<class T>
+inline void Stack<T>::LocateElem(T ElemToLocate,T &data)
+{
+	int location;
+	StackNode<T> *p = top;
+	while (p->data != ElemToLocate)
+	{
+		p = p->nextnode;
+		location++;
+	}
+	if (p==bottom)
+	{
+		exit(OVERFLOW);
+	}
+	data = p->data;
 }
 
 template<class T>
