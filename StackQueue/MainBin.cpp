@@ -95,7 +95,7 @@ int main() {
 			location=st.LocateElem(cardata[1]);
 			for (int i = 0; i < location; i++)
 			{
-
+				//continue
 			}
 			location = 0;
 		}
