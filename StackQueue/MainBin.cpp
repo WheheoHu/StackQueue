@@ -79,9 +79,6 @@ int main() {
 	Stack<int> st;
 	Stack<int> sttemp;
 	Quene<int> que;
-	que.entreQuene(123);
-	que.entreQuene(11);
-
 	//输入以及处理
 	//int *cardata = new int[3];
 	//while(!inputfile.eof())

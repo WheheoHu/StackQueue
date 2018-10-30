@@ -19,7 +19,7 @@ public:
 	QueneNode<T>* outQuene();
 
 private:
-	QueneNode<T> *head, rear;
+	QueneNode<T> *head, *rear;
 };
 
 template<class T>
@@ -56,7 +56,7 @@ inline QueneNode<T>* Quene<T>::outQuene()
 	if (p->nextnode==rear)
 	{
 		QueneNode<T> *temp = p;
-		p = p->nextnode;
+		head = rear;
 		return temp;
 		free(temp);
 	}
