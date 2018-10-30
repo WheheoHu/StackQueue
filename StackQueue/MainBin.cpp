@@ -80,29 +80,16 @@ int main() {
 	Stack<int> sttemp;
 	Quene<int> que;
 	//输入以及处理
-	//int *cardata = new int[3];
-	//while(!inputfile.eof())
-	//{
-	//	int location;
-	//	inputfile >> cardata[0];
-	//	inputfile >> cardata[1];
-	//	inputfile >> cardata[2];
-	//	if (cardata[0]==false)
-	//	{
-	//		st.Push(cardata[1], cardata[2]);
-	//	}
-	//	else
-	//	{
-	//		location=st.LocateElem(cardata[1]);
-	//		for (int i = 0; i < location; i++)
-	//		{
-	//			//continue
-	//		}
-	//		location = 0;
-	//	}
-	//}
+	int *cardata = new int[3];
+	while(!inputfile.eof())
+	{
+		inputfile >> cardata[0];
+		inputfile >> cardata[1];
+		inputfile >> cardata[2];
+	}
 	//输出。
 
+	delete[] cardata;
 	inputfile.close();
 	outputfile.close();
 }

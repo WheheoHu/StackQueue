@@ -1,5 +1,4 @@
 #pragma once
-#include <iostream>
 
 //结点结构
 template<typename T>
