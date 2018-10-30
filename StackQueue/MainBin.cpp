@@ -79,27 +79,27 @@ int main() {
 	Stack<int> sttemp;
 
 	//输入以及处理
-	int *cardata = new int[3];
-	while(!inputfile.eof())
-	{
-		int location;
-		inputfile >> cardata[0];
-		inputfile >> cardata[1];
-		inputfile >> cardata[2];
-		if (cardata[0]==false)
-		{
-			st.Push(cardata[1], cardata[2]);
-		}
-		else
-		{
-			location=st.LocateElem(cardata[1]);
-			for (int i = 0; i < location; i++)
-			{
-				//continue
-			}
-			location = 0;
-		}
-	}
+	//int *cardata = new int[3];
+	//while(!inputfile.eof())
+	//{
+	//	int location;
+	//	inputfile >> cardata[0];
+	//	inputfile >> cardata[1];
+	//	inputfile >> cardata[2];
+	//	if (cardata[0]==false)
+	//	{
+	//		st.Push(cardata[1], cardata[2]);
+	//	}
+	//	else
+	//	{
+	//		location=st.LocateElem(cardata[1]);
+	//		for (int i = 0; i < location; i++)
+	//		{
+	//			//continue
+	//		}
+	//		location = 0;
+	//	}
+	//}
 	//输出。
 	
 	inputfile.close();

@@ -84,7 +84,7 @@ inline int Stack<T>::LocateElem(T ElemToLocate,T &data)
 template<class T>
 inline int Stack<T>::LocateElem(T ElemToLocate)
 {
-	int location;
+	int location = 1;
 	StackNode<T> *p = top;
 	while (p->data != ElemToLocate)
 	{
