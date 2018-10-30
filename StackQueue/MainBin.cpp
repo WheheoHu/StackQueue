@@ -60,8 +60,6 @@
 //7  5
 
 #include <fstream>
-#include "linearlinkedlist.h"
-#include "lineartable.h"
 #include "Stack.h"
 
 int main() {
@@ -84,9 +82,23 @@ int main() {
 	int *cardata = new int[3];
 	while(!inputfile.eof())
 	{
+		int location;
 		inputfile >> cardata[0];
 		inputfile >> cardata[1];
 		inputfile >> cardata[2];
+		if (cardata[0]==false)
+		{
+			st.Push(cardata[1], cardata[2]);
+		}
+		else
+		{
+			location=st.LocateElem(cardata[1]);
+			for (int i = 0; i < location; i++)
+			{
+
+			}
+			location = 0;
+		}
 	}
 	outputfile << cardata[2];
 	
