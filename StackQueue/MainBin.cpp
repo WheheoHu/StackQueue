@@ -62,6 +62,7 @@
 #include <fstream>
 #include "linearlinkedlist.h"
 #include "lineartable.h"
+#include "Stack.h"
 
 int main() {
 	std::fstream inputfile, outputfile;
@@ -75,6 +76,9 @@ int main() {
 	double cost_per_hour;
 	inputfile >> car_num_parking;
 	inputfile >> cost_per_hour;
+
+	Stack<int> st;
+	
 	int *cardata = new int[3];
 	while(!inputfile.eof())
 	{
