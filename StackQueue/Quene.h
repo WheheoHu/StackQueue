@@ -4,8 +4,9 @@ template<typename T>
 struct QueneNode
 {
 	T data;
+	int time;
 	QueneNode<T> *nextnode;
-	QueneNode<T>(const T &d) : data(d), nextnode(NULL) {}
+	QueneNode<T>(const T &d, const int & t) : data(d), time(t), nextnode(NULL) {}
 };
 
 template<class T>
@@ -36,7 +37,7 @@ inline Quene<T>::~Quene()
 template<class T>
 inline void Quene<T>::InitQuene()
 {
-	rear = new QueneNode<T>(0);
+	rear = new QueneNode<T>(0,0);
 	head = rear;
 }
 
@@ -52,8 +53,8 @@ template<class T>
 inline QueneNode<T>* Quene<T>::outQuene()
 {
 	QueneNode<T> *p = head;
-	
-	if (p->nextnode==rear)
+
+	if (p->nextnode == rear)
 	{
 		QueneNode<T> *temp = p;
 		head = rear;
@@ -71,7 +72,7 @@ inline QueneNode<T>* Quene<T>::outQuene()
 		return temp;
 		free(temp);
 	}
-	
-	
+
+
 }
 
